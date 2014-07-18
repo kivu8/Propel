@@ -544,7 +544,10 @@ class Criteria implements IteratorAggregate
      */
     public function getCriterion($column)
     {
-        return $this->map[$column];
+        if(isset($this->map[$column])){
+            return $this->map[$column];
+        }
+        return null;
     }
 
     /**
