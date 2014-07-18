@@ -232,7 +232,7 @@ class Join
      */
     public function getJoinType()
     {
-        return null === $this->joinType ? self::INNER_JOIN : $this->joinType;
+        return $this->joinType;
     }
 
     /**
